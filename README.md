@@ -15,7 +15,7 @@ hand-rolled raw-socket SMTP mailer. No Composer packages required to run it.
 **Via Packagist / Composer (once published — see below):**
 
 ```bash
-composer create-project yourname/tiny-mvc my-app
+composer create-project krafsys/mini
 cd my-app
 # .env is created automatically from .env.example by the post-create-project script
 # edit .env with your DB + SMTP credentials
@@ -157,23 +157,6 @@ real library (PHPMailer/Symfony Mailer) instead.
 `false` shows a generic 500 page. Either way, everything is logged to
 `storage/logs/app.log`.
 
-## Publishing to Packagist
-
-This repo is set up as a `composer create-project`-style skeleton (like
-`laravel/laravel`), not a library you `composer require` into an existing
-app. To publish it:
-
-1. In `composer.json`, replace `"yourname/tiny-mvc"` with `<your-github-username>/tiny-mvc`
-   (and fill in `authors`).
-2. Push to a public GitHub repo and tag a release: `git tag v1.0.0 && git push origin v1.0.0`.
-3. On [packagist.org](https://packagist.org), submit the repository URL.
-4. Enable the GitHub webhook (automatic if you signed in via GitHub) so new tags publish automatically.
-
-Once published, anyone can scaffold a new project with:
-
-```bash
-composer create-project yourname/tiny-mvc my-app
-```
 
 ## What's deliberately left out
 
