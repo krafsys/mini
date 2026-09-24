@@ -2,3 +2,4 @@
 .env
 /storage/logs/*.log
 .DS_Store
+composer.lock
