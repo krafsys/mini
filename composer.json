@@ -1,0 +1,38 @@
+{
+    "name": "krafsys/mini",
+    "description": "A tiny, dependency-free PHP MVC framework: routing, .env, PDO, CSRF, and a raw-socket SMTP mailer.",
+    "type": "project",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "mvc",
+        "framework",
+        "micro-framework",
+        "router",
+        "smtp",
+        "minimal"
+    ],
+    "authors": [
+        {
+            "name": "Krafsys",
+            "email": "info@krafsys.vercy.fun"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/Core/helpers.php"
+        ]
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    }
+}

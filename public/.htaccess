@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Route everything that isn't a real file/directory through index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Belt-and-braces: never serve dotfiles even if this ends up outside public/
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
